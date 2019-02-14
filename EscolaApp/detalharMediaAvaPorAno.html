@@ -1,0 +1,35 @@
+<form>
+    <div class="box">
+        <div class="form-group">
+            <label for="nome">
+                Código:
+            </label>
+            <input class="form-control" type="text" name="codEscola" ng-model="codEscola"/>
+            
+            <label for="nome">
+                Ano:
+            </label>
+            <input class="form-control" type="text" name="ano" ng-model="ano"/>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="detalharMediaAvaliacaoPorAno(codEscola, ano)">
+            Detalhar
+        </button>
+    </div>
+
+    <!-- Tabela da Escola -->
+    <div class="box">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{mediaAvaliacao.media}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
